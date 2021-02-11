@@ -1,0 +1,194 @@
+$main-font: 'Montserrat', sans-serif;
+$btn-color: #FF4C00;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+    background-color: #e5e5e5;
+    width: 100%;
+
+  header {
+    background-color: #284622;
+    display: flex;
+    padding: 2.75rem;
+    max-width: 56.5rem;
+    margin: auto;
+    h1 {
+      font-family: $main-font;
+      font-weight: 700;
+      font-size: 1.938rem;
+      color: #ffffff;
+      margin-left: 2.75rem;
+    }
+    .for_mob {
+      display: none;
+    }
+  }
+  nav {
+    display: flex;
+    flex-basis: 100%;
+    max-width: 56.5rem;
+    justify-content: center;
+    margin:  -4rem auto 0;
+    background-color: #ffffff;
+    .btn {
+      margin: 2.125rem  1rem;
+      padding: 1rem 2.125rem;
+      border: none;
+      border-radius: 0.375rem ;
+      &:hover {
+        cursor: pointer;
+      }
+      a {
+        color: $btn-color;
+        font-weight: 700;
+      }
+    }
+    .active-btn {
+      background-color:$btn-color;
+      box-shadow: 5px 6px 22px rgba(204, 61, 0, 0.24);
+      a {
+        color: #ffffff;
+      }
+    }
+  }
+  article {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 2.75rem 2.74rem;
+    max-width: 56.5rem;
+    margin: auto;
+    background-color: #ffffff;
+    .for_mob {
+      display: none;
+    }
+    .main-info {
+      margin: 1rem 0 2rem;
+      font-size: 1rem;
+      line-height: 1.3rem;
+      flex-basis: 100%;
+    }
+    .another-text {
+      flex-basis: 55%;
+      margin-bottom: 1rem;
+      padding-right: 3rem;
+      .moo-text {
+        font-size: 0.813rem;
+        color: #7e7e7e;
+      }
+      .bold-text {
+        font-size: 1rem;
+        color: #031143;
+        font-weight: 700;
+        margin-top: 0.25rem;
+      }
+    }
+    .another-text-rt {
+      flex-basis: 45%;
+    }
+    .flag-block {
+      flex-basis: 55%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      margin-bottom: 1rem;
+      .moo-text {
+        font-size: 0.813rem;
+        color: #7e7e7e;
+        flex-basis: 100%;
+      }
+      .flag-block-item {
+        width: 1.619rem;
+        height: 0.75rem;
+        background-image: linear-gradient(#F5F5F5 33%, #41479B 33% 66%, #FF4B55 66% 100%);
+        margin-right: 0.313rem;
+        margin-top: 0.25rem;
+      }
+    }
+    .another-block-rt {
+      flex-basis: 45%;
+    }
+    .another-flag-block{
+      flex-basis: 35%;
+      margin: 1rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      p {
+        font-size: 0.813rem;
+        color: #7e7e7e;
+        flex-basis: 100%;
+      }
+      .another-flag-block-item {
+        flex-basis: 24%;
+        max-width: 3.375rem;
+        height: 1.563rem;
+        background-color: #c4c4c4;
+        border-radius: 0.125rem;
+        margin: 0.25rem .4rem 0 0;
+      }
+    }
+  }
+}
+
+//for mobile only
+@media all and (max-width:599px){
+  .not-for-mob {
+    display: none;
+  }
+  body{
+    display: flex;
+    flex-wrap: wrap;
+
+    header {
+      order: 1;
+      flex-basis: 100%;
+      padding: 1.25rem 1.25rem 8.375rem;
+      .for_mob {
+        display: block;
+      }
+    }
+    nav {
+      flex-direction: column;
+      order: 3;
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      margin-top: 0;
+      .btn {
+        flex-basis: 90%;
+        max-width: 180px;
+        margin: 1rem  auto;
+      }
+    }
+    article {
+      order: 2;
+      padding: 0 1.25rem 3rem;
+      flex-basis: 100%;
+      flex-direction: column;
+
+      .for_mob {
+        display: block;
+      }
+      .another-text {
+        padding: 0;
+      }
+      .flag-block-item {
+        margin-right: .5rem;
+
+      }
+      .another-flag-block {
+        gap: 0.5rem 2rem;
+        flex-basis: 100%;
+        align-content: stretch;
+        .another-flag-block-item {
+          max-width: calc((100%/4) - 2rem);
+
+        }
+      }
+    }
+  }
+}
